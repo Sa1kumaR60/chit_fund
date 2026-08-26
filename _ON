@@ -1,0 +1,14 @@
+import axios from "axios";
+const API = "http://localhost:5000/api/chits";// ✅ GET CHITSexport 
+const getChits = async () => {  
+    const token = localStorage.getItem("token"); 
+     return axios.get(API, {    headers: { Authorization: `Bearer ${token}`, },
+      }
+    );
+};// ✅ CREATE CHITexport
+ const createChit = async (data) => {  const token = localStorage.getItem("token"); 
+     return axios.post(`${API}/create`, data, 
+        {    headers: {      Authorization: `Bearer ${token}`,    },  
+    }
+);
+};

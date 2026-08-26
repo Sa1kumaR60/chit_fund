@@ -1,0 +1,11 @@
+{
+  "group_name": "QA Test Group 1",
+  "chit_value": 100000,
+  "start_date": "2026-07-01",
+  "duration_months": 10,
+  "total_members": 10,
+  "minimum_members_required": 5,
+  "monthly_due_date": 5,
+  "grace_period_days": 3,
+  "description": "Functional testing group"
+}
