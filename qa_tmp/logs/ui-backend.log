@@ -1,0 +1,12 @@
+[dotenv@17.3.1] injecting env (7) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (7) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Server running on port 5000
+MySQL connected successfully
+Submit KYC Error: Error: Invalid document format. Allowed: PDF, JPG, PNG.
+    at savePrivateKycDocument (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\services\storageService.js:32:11)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:146:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

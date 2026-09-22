@@ -1,0 +1,138 @@
+{
+  "members": {
+    "A": {
+      "tag": "A",
+      "name": "QA KYC A",
+      "phone": "7016209035",
+      "email": "qakyc.A.mtrhkna8@test.local",
+      "password": "Test@1234",
+      "id": 18,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODg4MDA0MDEsImV4cCI6MTc4ODg4NjgwMX0.TaBuEvGzKR3deisNNuxLvZLJVWaeU8Jn2ncQSjUhRt8",
+      "pan": "QPLPL4523Z",
+      "aadhaar": "424580320437"
+    },
+    "B": {
+      "tag": "B",
+      "name": "QA KYC B",
+      "phone": "7083315002",
+      "email": "qakyc.B.mtrhknm4@test.local",
+      "password": "Test@1234",
+      "id": 19,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODg4MDA0MDIsImV4cCI6MTc4ODg4NjgwMn0.H7tc304sk3igcVTNWC4W5QhhCZiFxBslpGD4p2eZXwI",
+      "pan": "QPLPL7696Z",
+      "aadhaar": "441919963164"
+    },
+    "C": {
+      "tag": "C",
+      "name": "QA KYC C",
+      "phone": "7068442193",
+      "email": "qakyc.C.mtrhknyo@test.local",
+      "password": "Test@1234",
+      "id": 20,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODg4MDA0MDIsImV4cCI6MTc4ODg4NjgwMn0.eQ9QzjtsK8OGC2XT1LrBhxq2HAo8X_8BDfe90psoNd0",
+      "pan": "QPLPL9488Z",
+      "aadhaar": "490681519823"
+    },
+    "D": {
+      "tag": "D",
+      "name": "QA KYC D",
+      "phone": "7031036792",
+      "email": "qakyc.D.mtrhkoaj@test.local",
+      "password": "Test@1234",
+      "id": 21,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODg4MDA0MDMsImV4cCI6MTc4ODg4NjgwM30.UakXqbtUBsnV4_YXRIfuLG6T_IbwMRSt5nmI_NPPwVs",
+      "pan": "QPLPL1913Z",
+      "aadhaar": "410588639078"
+    },
+    "E": {
+      "tag": "E",
+      "name": "QA KYC E",
+      "phone": "7048649338",
+      "email": "qakyc.E.mtrhkonb@test.local",
+      "password": "Test@1234",
+      "id": 22,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODg4MDA0MDMsImV4cCI6MTc4ODg4NjgwM30.CCxwt9SJpOv-D8JQg1vIKqKofiivvLGUYistzty75OE",
+      "pan": "QPLPL4349Z",
+      "aadhaar": "446224974406"
+    },
+    "F": {
+      "tag": "F",
+      "name": "QA KYC F",
+      "phone": "7040702253",
+      "email": "qakyc.F.mtrhkp05@test.local",
+      "password": "Test@1234",
+      "id": 23,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODg4MDA0MDMsImV4cCI6MTc4ODg4NjgwM30.wxX-b15h0ffGXwVQKN_PufuJmjDOdx3O5NC4LLXk3ec",
+      "pan": "QPLPL4507Z",
+      "aadhaar": "425229541202"
+    }
+  },
+  "admin": {
+    "phone": "7020834993",
+    "password": "Test@1234",
+    "email": "qakyc.qaadmin.mtrhm24n@test.local",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsInRva2VuX3ZlcnNpb24iOjAsImlhdCI6MTc4ODgwMDQ2NywiZXhwIjoxNzg4ODg2ODY3fQ.O09SJKafqCSyUpFBSeoysw2zVKab8MuTERVu7uaNVAc",
+    "id": 24
+  },
+  "chits": {
+    "gate1": 4,
+    "gate2": 5
+  },
+  "baseline": {
+    "users": [
+      {
+        "user_id": 1,
+        "name": "Super Admin",
+        "role": "ADMIN",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "user_id": 2,
+        "name": "Rahul Sharma",
+        "role": "MEMBER",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "user_id": 6,
+        "name": "chandu",
+        "role": "MEMBER",
+        "verification_status": "REJECTED"
+      },
+      {
+        "user_id": 7,
+        "name": "ramavath saikumar",
+        "role": "ADMIN",
+        "verification_status": "PENDING"
+      }
+    ],
+    "kycCount": 2,
+    "chits": [
+      {
+        "chit_id": 1,
+        "group_name": "group 1",
+        "status": "WAITING_CONFIG"
+      },
+      {
+        "chit_id": 2,
+        "group_name": "first",
+        "status": "ACTIVE"
+      },
+      {
+        "chit_id": 3,
+        "group_name": "first",
+        "status": "WAITING_CONFIG"
+      }
+    ]
+  },
+  "rogueAdmin": {
+    "phone": "7029506274",
+    "pass": "Test@1234",
+    "email": "qakyc.rogue.mtrhkn00@test.local"
+  },
+  "kycIds": {
+    "A": 11,
+    "D": 13,
+    "E": 14,
+    "B": 16
+  }
+}

@@ -1,30 +1,23 @@
 import { useState } from "react";
-import { submitKyc } from "../api/authApi";
+import { initiateKyc } from "../api/profileApi";
 
 function KYCModal({ onClose, onSuccess }) {
-  const [aadhar, setAadhar] = useState("");
-  const [pan, setPan] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!aadhar || !pan) {
-      setError("Please provide Aadhar and PAN.");
-      return;
-    }
+  const handleStartDigiLocker = async () => {
     setLoading(true);
+    setError("");
     try {
-      await submitKyc({
-        aadhar_number: aadhar,
-        pan_number: pan,
-      });
-      onSuccess();
-    }
-     catch (err) {
-      setError(err.response?.data?.message || "KYC verification failed.");
-    }
-     finally {
+      const res = await initiateKyc();
+      if (res.redirectUrl) {
+        window.location.href = res.redirectUrl;
+      } else {
+        setError("Failed to obtain provider authorization URL.");
+      }
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || "Failed to initiate DigiLocker verification.");
+    } finally {
       setLoading(false);
     }
   };
@@ -32,49 +25,30 @@ function KYCModal({ onClose, onSuccess }) {
   return (
     <div style={overlayStyle}>
       <div style={modalStyle} className="glass-card">
-        <h2 style={{ marginBottom: "1rem" }}>KYC Verification Required</h2>
+        <h2 style={{ marginBottom: "1rem" }}>Identity Verification Required</h2>
         <p style={{ color: "var(--text-secondary)", marginBottom: "1.5rem" }}>
-          For app security, please verify your identity before joining this chit group.
+          To join chit groups, verify your identity securely via <strong>DigiLocker / API Setu</strong>.
         </p>
 
         {error && <div className="alert alert-danger" style={{ marginBottom: "1rem" }}>{error}</div>}
 
-        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <div>
-            <label style={{ display: "block", marginBottom: "0.5rem" }}>Aadhar Number</label>
-            <input
-              type="text"
-              className="modern-input"
-              value={aadhar}
-              onChange={(e) => setAadhar(e.target.value)}
-              placeholder="XXXX XXXX XXXX"
-              inputMode="numeric"
-              maxLength="14"
-              required
-            />
-          </div>
-          <div>
-            <label style={{ display: "block", marginBottom: "0.5rem" }}>PAN Number</label>
-            <input
-              type="text"
-              className="modern-input"
-              value={pan}
-              onChange={(e) => setPan(e.target.value.toUpperCase())}
-              placeholder="ABCDE1234F"
-              maxLength="10"
-              required
-            />
-          </div>
-          
-          <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
-            <button type="button" className="btn btn-secondary" onClick={onClose} style={{ flex: 1 }}>
-              Cancel
-            </button>
-            <button type="submit" className="btn btn-primary" disabled={loading} style={{ flex: 1 }}>
-              {loading ? "Verifying..." : "Submit KYC"}
-            </button>
-          </div>
-        </form>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", margin: "1.5rem 0" }}>
+          <button
+            type="button"
+            className="btn btn-primary"
+            disabled={loading}
+            onClick={handleStartDigiLocker}
+            style={{ padding: "0.85rem", fontSize: "1rem", fontWeight: "600", display: "flex", justifyContent: "center", alignItems: "center", gap: "0.5rem" }}
+          >
+            {loading ? "Connecting to DigiLocker..." : "🔒 Verify Identity via DigiLocker"}
+          </button>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "1.5rem" }}>
+          <button type="button" className="btn btn-secondary" onClick={onClose} style={{ flex: 1 }}>
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
   );

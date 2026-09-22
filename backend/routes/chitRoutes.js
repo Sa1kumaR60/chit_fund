@@ -18,6 +18,7 @@ const router = express.Router();
 router.get("/", authMiddleware, getChits);
 router.get("/invitations/me", authMiddleware, getInvitations);
 router.post("/claim-invite", authMiddleware, claimInvitationByToken);
+router.post("/invitations/:invitationId/accept", authMiddleware, claimInvitationByToken);
 
 // Wizard endpoints (Admin)
 router.post("/wizard/create", authMiddleware, requireRole("ADMIN"), createWizardChit);

@@ -1,0 +1,121 @@
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Server running on port 5000
+MySQL connected successfully
+MYSQL ERROR: Error: Duplicate entry '7055375748' for key 'users.phone'
+    at PromisePoolConnection.query (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at exports.register (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\authController.js:61:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sql: "INSERT INTO users (name, phone, email, password_hash, role, token_version) VALUES ('x', '7055375748', 'qakyc.dup.mtrhkdxi@test.local', '$2b$10$4fHc0iSnnxKD.ACB90pnXeNXsMmxfF33zvDcldDDeh7awT2irkUHq', 'MEMBER', 0)",
+  sqlState: '23000',
+  sqlMessage: "Duplicate entry '7055375748' for key 'users.phone'"
+}
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Server running on port 5000
+MySQL connected successfully
+MYSQL ERROR: Error: Duplicate entry '7029506274' for key 'users.phone'
+    at PromisePoolConnection.query (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at exports.register (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\authController.js:61:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sql: "INSERT INTO users (name, phone, email, password_hash, role, token_version) VALUES ('x', '7029506274', 'qakyc.dup.mtrhkn3r@test.local', '$2b$10$x5dkRZUBZtm.LURDJoz/1uNyM3NxrXmkLcxBHpXnvdA1QGFpHXz0C', 'MEMBER', 0)",
+  sqlState: '23000',
+  sqlMessage: "Duplicate entry '7029506274' for key 'users.phone'"
+}
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Server running on port 5000
+MySQL connected successfully
+Submit KYC Error: TypeError: Cannot destructure property 'pan_number' of 'req.body' as it is undefined.
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:109:13)
+    at Layer.handleRequest (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\route.js:157:13)
+    at authMiddleware (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\middleware\authMiddleware.js:41:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Server running on port 5000
+MySQL connected successfully
+Submit KYC Error: TypeError: Cannot destructure property 'pan_number' of 'req.body' as it is undefined.
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:109:13)
+    at Layer.handleRequest (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\route.js:157:13)
+    at authMiddleware (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\middleware\authMiddleware.js:41:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Server running on port 5000
+MySQL connected successfully
+Submit KYC Error: TypeError: Cannot destructure property 'pan_number' of 'req.body' as it is undefined.
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:109:13)
+    at Layer.handleRequest (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\route.js:157:13)
+    at authMiddleware (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\middleware\authMiddleware.js:41:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Server running on port 5000
+MySQL connected successfully
+Submit KYC Error: Error: Invalid document format. Allowed: PDF, JPG, PNG.
+    at savePrivateKycDocument (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\services\storageService.js:32:11)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:146:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Submit KYC Error: Error: Invalid document format. Allowed: PDF, JPG, PNG.
+    at savePrivateKycDocument (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\services\storageService.js:32:11)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:146:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+PayloadTooLargeError: request entity too large
+    at readStream (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\raw-body\index.js:163:17)
+    at getRawBody (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\raw-body\index.js:116:12)
+    at read (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\body-parser\lib\read.js:113:3)
+    at jsonParser (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\body-parser\lib\types\json.js:88:5)
+    at Layer.handleRequest (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:342:13)
+    at C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:582:12)
+    at next (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:291:5)
+    at cors (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\cors\lib\index.js:188:7)
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Server running on port 5000
+MySQL connected successfully

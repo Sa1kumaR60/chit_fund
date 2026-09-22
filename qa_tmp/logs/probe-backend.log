@@ -1,0 +1,19 @@
+[dotenv@17.3.1] injecting env (7) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+Server running on port 5000
+MySQL connected successfully
+[dotenv@17.3.1] injecting env (7) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Server running on port 5000
+MySQL connected successfully
+PayloadTooLargeError: request entity too large
+    at readStream (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\raw-body\index.js:163:17)
+    at getRawBody (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\raw-body\index.js:116:12)
+    at read (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\body-parser\lib\read.js:113:3)
+    at jsonParser (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\body-parser\lib\types\json.js:88:5)
+    at Layer.handleRequest (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:342:13)
+    at C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:582:12)
+    at next (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\router\index.js:291:5)
+    at cors (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\cors\lib\index.js:188:7)

@@ -69,6 +69,7 @@ function AdminDashboard() {
             <span style={{ color: "var(--text-muted)" }}>|</span>
             <span>Console</span>
           </div>
+          <button className="btn btn-secondary" onClick={() => navigate("/profile")}>👤 Admin Profile</button>
           <button className="btn btn-secondary" onClick={() => navigate("/wallet")}>Commission Wallet</button>
           <button className="btn btn-danger" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem" }} onClick={logout}>Logout</button>
         </div>

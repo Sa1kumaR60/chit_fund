@@ -1,0 +1,14 @@
+-- Migration 005: Expand chit_members.status ENUM to include PAID_CURRENT and DEFAULTER
+
+ALTER TABLE chit_members MODIFY COLUMN status ENUM(
+  'INVITED',
+  'ACCEPTED',
+  'DOCS_PENDING',
+  'VERIFIED',
+  'ACTIVE',
+  'PAID_CURRENT',
+  'LATE_PAYMENT',
+  'DEFAULTER',
+  'DEFAULTED',
+  'COMPLETED'
+) NOT NULL DEFAULT 'INVITED';

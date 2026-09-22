@@ -1,0 +1,147 @@
+{
+  "results": [
+    {
+      "id": "server",
+      "label": "harness backend up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "vite",
+      "label": "vite up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "setup",
+      "label": "3 UI members created",
+      "ok": true,
+      "detail": "U1=41 U2=42 U3=43"
+    },
+    {
+      "id": "setup",
+      "label": "mock Aadhaar hash released for UI happy path",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "member-kyc-tab",
+      "label": "KYC tab shows NOT_STARTED + DigiLocker CTA",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "id": "callback-url",
+      "label": "redirected to /kyc/callback",
+      "ok": false,
+      "detail": "url=http://127.0.0.1:5173/profile"
+    },
+    {
+      "id": "callback-verified-ui",
+      "label": "callback page shows Identity Verified Successfully",
+      "ok": false,
+      "detail": "🪙 Smart Chit Fund | ← Dashboard | Logout | R | Ravi QA Verified | MEMBER | Phone: 7138895774 | Email: qaui2.mu03xbpx986@test.local | KYC PENDING | MERIT SCORE:"
+    },
+    {
+      "id": "member-verified",
+      "label": "profile shows VERIFIED + provider MOCK + masked aadhaar",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "id": "blocked-join-alert",
+      "label": "blocked claim shows KYC-mandatory message",
+      "ok": true,
+      "detail": "dialogs=[\"KYC verification is mandatory before joining a chit group. Please complete your identity verification in Profile.\"]"
+    },
+    {
+      "id": "blocked-join-no-modal",
+      "label": "in-app KYC prompt does NOT open (kycRequired key vs requiresKyc mismatch)",
+      "ok": true,
+      "detail": "modalShown=false"
+    },
+    {
+      "id": "u2-review",
+      "label": "U2 routed to REVIEW_REQUIRED (duplicate Aadhaar)",
+      "ok": false,
+      "detail": "{\"status\":\"VERIFIED\",\"reasonCode\":\"NAME_MATCH_EXACT\",\"provider\":\"MOCK\",\"message\":\"Identity verification successful!\"}"
+    },
+    {
+      "id": "admin-queue-ui",
+      "label": "admin queue lists U2 submission",
+      "ok": false,
+      "detail": "found=false"
+    },
+    {
+      "id": "admin-queue-masked-quality",
+      "label": "queue shows literal 'PENDING' instead of masked Aadhaar (data-quality bug)",
+      "ok": true,
+      "detail": "literalPENDING=true"
+    },
+    {
+      "id": "admin-approve-ui",
+      "label": "admin approves from UI",
+      "ok": false,
+      "detail": "dialogs=[\"KYC verification is mandatory before joining a chit group. Please complete your identity verification in Profile.\"]"
+    },
+    {
+      "id": "u2-verified-ui",
+      "label": "U2 profile shows KYC VERIFIED after admin approval",
+      "ok": true,
+      "detail": "KYC VERIFIED"
+    },
+    {
+      "id": "callback-guard",
+      "label": "logged-out callback page redirects to login",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/"
+    },
+    {
+      "id": "console-pii",
+      "label": "no identity data leaked to browser console",
+      "ok": true,
+      "detail": "lines=30"
+    },
+    {
+      "id": "console-errors",
+      "label": "console errors recorded",
+      "ok": true,
+      "detail": "error: Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    }
+  ],
+  "consoleMsgs": [
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "error: Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o"
+  ],
+  "dialogs": [
+    "KYC verification is mandatory before joining a chit group. Please complete your identity verification in Profile."
+  ]
+}

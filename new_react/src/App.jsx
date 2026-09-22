@@ -13,6 +13,8 @@ import PaymentPage from "./pages/PaymentPage";
 import Register from "./pages/Register";
 import WalletPage from "./pages/WalletPage";
 import MonthlyReport from "./pages/MonthlyReport";
+import ProfilePage from "./pages/ProfilePage";
+import KycCallbackPage from "./pages/KycCallbackPage";
 
 function App() {
   return (
@@ -22,6 +24,22 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPasswordLink />} />
+        <Route
+          path="/kyc/callback"
+          element={
+            <ProtectedRoute>
+              <KycCallbackPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/create-chit"
           element={

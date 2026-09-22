@@ -20,24 +20,18 @@ async function runTestSuite() {
   console.log("🧪 Starting Comprehensive Password Reset & Security Verification Test Suite...\n");
 
   try {
-    // Ensure test user exists in DB
+    // Ensure test user exists in DB safely without truncating user tables
     const adminPassword = await bcrypt.hash("Admin@123", 10);
     const memberPassword = await bcrypt.hash("Member@123", 10);
-    
-    await dbPromise.query("SET FOREIGN_KEY_CHECKS = 0");
-    await dbPromise.query("TRUNCATE TABLE password_reset_tokens");
-    await dbPromise.query("TRUNCATE TABLE audit_logs");
-    await dbPromise.query("TRUNCATE TABLE users");
-    await dbPromise.query("SET FOREIGN_KEY_CHECKS = 1");
 
     await dbPromise.query(
-      `INSERT INTO users (user_id, name, phone, email, password_hash, role, verification_status, merit_score, token_version)
+      `INSERT IGNORE INTO users (user_id, name, phone, email, password_hash, role, verification_status, merit_score, token_version)
        VALUES (1, 'Super Admin', '9999999999', 'admin@chitfund.com', ?, 'ADMIN', 'VERIFIED', 100, 0)`,
       [adminPassword]
     );
 
     await dbPromise.query(
-      `INSERT INTO users (user_id, name, phone, email, password_hash, role, verification_status, merit_score, token_version)
+      `INSERT IGNORE INTO users (user_id, name, phone, email, password_hash, role, verification_status, merit_score, token_version)
        VALUES (2, 'Rahul Sharma', '9876543210', 'rahul@gmail.com', ?, 'MEMBER', 'VERIFIED', 100, 0)`,
       [memberPassword]
     );

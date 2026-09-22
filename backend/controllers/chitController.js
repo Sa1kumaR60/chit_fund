@@ -371,23 +371,33 @@ const activateChit = async (req, res) => {
 const claimInvitationByToken = async (req, res) => {
   try {
     const userId = req.user?.id;
-    const { token } = req.body;
+    const { token, invitationId } = { ...req.params, ...req.body };
 
     if (!userId) return res.status(401).json({ message: "Unauthorized" });
 
     const [[user]] = await dbPromise.query("SELECT * FROM users WHERE user_id = ?", [userId]);
     if (!user) return res.status(404).json({ message: "User not found" });
 
-    // Lookup invitation by token OR user phone/email match
+    // Lookup invitation by invitation_id OR token OR user phone/email match
     const [[invitation]] = await dbPromise.query(
       `SELECT * FROM chit_invitations 
-       WHERE (invitation_token = ? OR invitee_phone = ? OR invitee_email = ? OR user_id = ?) 
+       WHERE (invitation_id = ? OR invitation_token = ? OR invitee_phone = ? OR invitee_email = ? OR user_id = ?) 
          AND status = 'PENDING' LIMIT 1`,
-      [token || "", user.phone, user.email, userId]
+      [invitationId || 0, token || "", user.phone, user.email, userId]
     );
 
     if (!invitation) {
       return res.status(404).json({ message: "No pending invitation found for your account." });
+    }
+
+    // Mandatory KYC verification check before joining chit group
+    const [[userKyc]] = await dbPromise.query("SELECT status FROM user_kyc WHERE user_id = ?", [userId]);
+    if (!userKyc || userKyc.status !== "VERIFIED") {
+      return res.status(403).json({
+        message: "KYC verification is mandatory before joining a chit group. Please complete your identity verification in Profile.",
+        kycRequired: true,
+        requiresKyc: true,
+      });
     }
 
     const chitId = invitation.chit_id;

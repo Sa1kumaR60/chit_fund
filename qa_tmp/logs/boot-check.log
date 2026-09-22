@@ -1,0 +1,19 @@
+[dotenv@17.3.1] injecting env (9) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\routes\profileRoutes.js:41
+router.get("/admin/kyc-queue", authMiddleware, requireRole("ADMIN"), kycAdminController.getPendingKycQueue);
+                                                                     ^
+
+ReferenceError: kycAdminController is not defined
+    at Object.<anonymous> (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\routes\profileRoutes.js:41:70)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Module.require (node:internal/modules/cjs/loader:1527:12)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\index.js:14:23)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+
+Node.js v22.23.2

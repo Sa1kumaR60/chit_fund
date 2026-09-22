@@ -1,0 +1,106 @@
+{
+  "members": {
+    "M1": {
+      "tag": "M1",
+      "name": "QA NewFlow M1",
+      "phone": "7097867331",
+      "email": "qakyc.nfm1.mu03nry1@test.local",
+      "password": "Test@1234",
+      "id": 33,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzMsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyMjgsImV4cCI6MTc4OTQwNzYyOH0.jtILbq-MInMaFy5N5MWb--Gs0ysG7xMYYsIrW0fWwp0",
+      "regStatus": 200,
+      "loginStatus": 200
+    },
+    "M2": {
+      "tag": "M2",
+      "name": "QA NewFlow M2",
+      "phone": "7075805476",
+      "email": "qakyc.nfm2.mu03ns7g@test.local",
+      "password": "Test@1234",
+      "id": 34,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzQsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyMjgsImV4cCI6MTc4OTQwNzYyOH0.9Gpop8twVgs8ss9QX7bZbk5msQyFSn4wVHrGdVTTx5M",
+      "regStatus": 200,
+      "loginStatus": 200
+    },
+    "M3": {
+      "tag": "M3",
+      "name": "QA NewFlow M3",
+      "phone": "7045533241",
+      "email": "qakyc.nfm3.mu03nsei@test.local",
+      "password": "Test@1234",
+      "id": 35,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzUsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyMjksImV4cCI6MTc4OTQwNzYyOX0.yaaapXIkhgK28V6aqzFr1N7S6bPmTP55maDS7FSgZWs",
+      "regStatus": 200,
+      "loginStatus": 200
+    },
+    "M4": {
+      "tag": "M4",
+      "name": "QA NewFlow M4",
+      "phone": "7032738025",
+      "email": "qakyc.nfm4.mu03nski@test.local",
+      "password": "Test@1234",
+      "id": 36,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzYsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyMjksImV4cCI6MTc4OTQwNzYyOX0.381u9zS7MIFA2T01PT52Oz55XUboXY90AxTWP01voq8",
+      "regStatus": 200,
+      "loginStatus": 200
+    },
+    "M5": {
+      "tag": "M5",
+      "name": "QA NewFlow M5",
+      "phone": "7086857732",
+      "email": "qakyc.nfm5.mu03nsrv@test.local",
+      "password": "Test@1234",
+      "id": 37,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzcsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyMjksImV4cCI6MTc4OTQwNzYyOX0.sHFNckZfseyDHMhyDzU4IijQGOSS9rAxFfQOHrYGq0w",
+      "regStatus": 200,
+      "loginStatus": 200
+    },
+    "M6": {
+      "tag": "M6",
+      "name": "QA NewFlow M6",
+      "phone": "7057583225",
+      "email": "qakyc.nfm6.mu03nsyf@test.local",
+      "password": "Test@1234",
+      "id": 38,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyMjksImV4cCI6MTc4OTQwNzYyOX0.hR2DmvOH2YZs7qxD3cme_5y4Hy2RXObIk9Wr7HP8dGQ",
+      "regStatus": 200,
+      "loginStatus": 200
+    },
+    "M7": {
+      "tag": "M7",
+      "name": "QA NewFlow M7",
+      "phone": "7014447760",
+      "email": "qakyc.nfm7.mu03nt7l@test.local",
+      "password": "Test@1234",
+      "id": 39,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyMzAsImV4cCI6MTc4OTQwNzYzMH0.f3LEyZ-WVTvXO2R6fWl2Zh6MjNY07Pwdh97qiN1ldko",
+      "regStatus": 200,
+      "loginStatus": 200
+    },
+    "M8": {
+      "tag": "M8",
+      "name": "QA NewFlow M8",
+      "phone": "7069333536",
+      "email": "qakyc.nfm8.mu03p48l@test.local",
+      "password": "Test@1234",
+      "id": 40,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDAsInJvbGUiOiJNRU1CRVIiLCJ0b2tlbl92ZXJzaW9uIjowLCJpYXQiOjE3ODkzMjEyOTEsImV4cCI6MTc4OTQwNzY5MX0.4D3a5zHkKiHZiCEBVya8dDxqFP8tyzMan3HlX9tjcHI"
+    }
+  },
+  "admin": {
+    "phone": "7020834993",
+    "password": "Test@1234",
+    "email": "qakyc.qaadmin.mtrhm24n@test.local",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsInRva2VuX3ZlcnNpb24iOjAsImlhdCI6MTc4OTMyMTIzMCwiZXhwIjoxNzg5NDA3NjMwfQ.jSyWseNDOJrM-14HASLArd3rgvgntxGa4qfxOCWWbJ8",
+    "id": 24
+  },
+  "tokens": {
+    "M1": "f91a79123d4fbd79a99fd2a0b967d01de7a1a02102525c907ce9c7d2699d9fd0",
+    "M2": "2fb2d71937567a6eee9439c52aae21fcade5a7a7862656eba16ae9a9a58f57b6",
+    "M3": "a0290f8210a4108ac2bbac4056054213e6a6ab524843b50140c28c451e47d88b"
+  },
+  "mockClean": "999988889901",
+  "chit": {
+    "gate": 6
+  }
+}

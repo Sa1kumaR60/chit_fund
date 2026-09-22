@@ -1,0 +1,257 @@
+{
+  "results": [
+    {
+      "id": "backend",
+      "label": "backend on :5000",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "vite",
+      "label": "vite dev server on :5173",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "chrome",
+      "label": "system Chrome found",
+      "ok": true,
+      "detail": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+    },
+    {
+      "id": "login-render",
+      "label": "login page renders form",
+      "ok": true,
+      "detail": "🪙 Smart Chit Fund |  | Secure Decentralized Chit Fund System |  | A"
+    },
+    {
+      "id": "login-wrong",
+      "label": "wrong credentials show error",
+      "ok": true,
+      "detail": "Invalid password"
+    },
+    {
+      "id": "register-role-ui",
+      "label": "Register UI exposes ADMIN role option (public admin reg)",
+      "ok": true,
+      "detail": "MEMBER:Member (Contributor) | ADMIN:Admin (First setup only)"
+    },
+    {
+      "id": "register-flow",
+      "label": "UI registration succeeds -> login page",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/"
+    },
+    {
+      "id": "member-login",
+      "label": "member logs in -> Member Dashboard",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/member"
+    },
+    {
+      "id": "profile-open",
+      "label": "member opens profile",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/profile"
+    },
+    {
+      "id": "profile-badge",
+      "label": "profile banner shows KYC PENDING badge",
+      "ok": true,
+      "detail": "KYC PENDING"
+    },
+    {
+      "id": "kyc-form",
+      "label": "KYC form loads with PAN/Aadhaar/file inputs",
+      "ok": true,
+      "detail": "{\"pan\":true,\"aad\":true,\"file\":true,\"panReq\":true,\"aadReq\":true,\"fileReq\":true,\"fileAccept\":\".pdf,.jpg,.jpeg,.png\"}"
+    },
+    {
+      "id": "kyc-required",
+      "label": "required fields marked",
+      "ok": true,
+      "detail": "fileAccept=.pdf,.jpg,.jpeg,.png"
+    },
+    {
+      "id": "kyc-empty-submit",
+      "label": "empty submit blocked client-side (no API call)",
+      "ok": true,
+      "detail": "posts 0->0"
+    },
+    {
+      "id": "kyc-invalid-pan",
+      "label": "invalid PAN shows server error message",
+      "ok": true,
+      "detail": "Invalid PAN number format (e.g. ABCDE1234F)."
+    },
+    {
+      "id": "kyc-bad-file",
+      "label": "invalid file type (.exe) produces error message",
+      "ok": true,
+      "detail": "Invalid document format. Allowed: PDF, JPG, PNG."
+    },
+    {
+      "id": "kyc-oversize",
+      "label": "oversized file (>1MB) produces error message",
+      "ok": false,
+      "detail": "no error text"
+    },
+    {
+      "id": "kyc-valid-submit",
+      "label": "valid KYC submitted via UI",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "kyc-status-pending",
+      "label": "UI shows PENDING status",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "kyc-history-ui",
+      "label": "timeline history visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "kyc-reload",
+      "label": "status persists after page reload",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "guard-direct",
+      "label": "logged-out /profile access redirects to login",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/"
+    },
+    {
+      "id": "admin-login",
+      "label": "QA admin logs in -> /admin",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/admin"
+    },
+    {
+      "id": "admin-queue-tab",
+      "label": "admin sees KYC Review Queue tab",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "admin-sees-submission",
+      "label": "admin sees the member's pending submission",
+      "ok": true,
+      "detail": "memberVisible=true"
+    },
+    {
+      "id": "admin-review-modal",
+      "label": "review panel shows masked PAN/Aadhaar (no document viewer)",
+      "ok": true,
+      "detail": "maskedShown=true"
+    },
+    {
+      "id": "admin-approve",
+      "label": "admin approves KYC from UI",
+      "ok": true,
+      "detail": "clicked"
+    },
+    {
+      "id": "member-sees-verified",
+      "label": "member UI shows KYC VERIFIED after approval",
+      "ok": true,
+      "detail": "KYC VERIFIED"
+    },
+    {
+      "id": "member-history-verified",
+      "label": "timeline shows VERIFIED entry",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "guard-admin",
+      "label": "member blocked from /admin",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/"
+    },
+    {
+      "id": "guard-admin-session",
+      "label": "EXPECTED: redirect to /member keeping session | ACTUAL: redirect to / and session cleared (bug)",
+      "ok": false,
+      "detail": "url=http://127.0.0.1:5173/ tokenBefore=true tokenAfter=false"
+    },
+    {
+      "id": "relogin-after-guard",
+      "label": "member can log in again after forced logout",
+      "ok": true,
+      "detail": "url=http://127.0.0.1:5173/member"
+    },
+    {
+      "id": "console-pii",
+      "label": "no synthetic PAN/Aadhaar in browser console",
+      "ok": true,
+      "detail": "console lines=44 hits=false"
+    },
+    {
+      "id": "console-errors",
+      "label": "no unexpected console errors (recorded)",
+      "ok": false,
+      "detail": "error: Failed to load resource: the server responded with a status of 401 (Unauthorized) || error: Failed to load resource: the server responded with a status of 400 (Bad Request) || error: Failed to "
+    }
+  ],
+  "consoleMsgs": [
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "error: Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "verbose: [DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o"
+  ],
+  "kycPosts": [
+    1789267459706,
+    1789267461702,
+    1789267463762
+  ],
+  "newMember": {
+    "phone": "7267445943",
+    "name": "QA UI Member"
+  }
+}

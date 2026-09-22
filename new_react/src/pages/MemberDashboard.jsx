@@ -119,6 +119,7 @@ function MemberDashboard() {
             <span style={{ color: "var(--text-muted)" }}>|</span>
             <span>ID: <code>#{user?.id}</code></span>
           </div>
+          <button className="btn btn-secondary" onClick={() => navigate("/profile")}>👤 My Profile</button>
           <button className="btn btn-secondary" onClick={() => navigate("/wallet")}>My Wallet</button>
           <button className="btn btn-danger" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem" }} onClick={logout}>Logout</button>
         </div>

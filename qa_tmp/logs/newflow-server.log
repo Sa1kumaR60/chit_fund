@@ -1,0 +1,85 @@
+
+===== RUN newflow 2026-09-13T17:40:27.730Z =====
+[dotenv@17.3.1] injecting env (0) from backend\.env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[QA HARNESS] server running on port 5000
+MySQL connected successfully
+KYC Callback Error: Data truncated for column 'action_type' at row 1
+
+===== RUN fixups 2026-09-13T17:41:30.048Z =====
+[dotenv@17.3.1] injecting env (0) from backend\.env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[QA HARNESS] server running on port 5000
+MySQL connected successfully
+
+===== RUN admin_gate 2026-09-13T17:45:01.947Z =====
+[dotenv@17.3.1] injecting env (0) from backend\.env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[QA HARNESS] server running on port 5000
+MySQL connected successfully
+Submit KYC Error: Error: Data truncated for column 'status' at row 1
+    at PromisePoolConnection.query (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:157:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 'WARN_DATA_TRUNCATED',
+  errno: 1265,
+  sql: 'INSERT INTO user_kyc (user_id, pan_number_masked, pan_number_hash, aadhaar_number_masked, aadhaar_number_hash, id_document_path, status)\n' +
+    "         VALUES (38, 'MANUL****Z', 'b9a7c37cf27db563a5565d3c52172497e92c4216be092944be25bef4c4c79588', 'XXXX-XXXX-8901', 'c1744ecfc0180ed6552a356dec5b2317152a16d8c0f1e1b83f2151f20d6cbf1e', 'storage/private_kyc_docs/default-placeholder.pdf', 'PENDING')\n" +
+    '         ON DUPLICATE KEY UPDATE \n' +
+    '           pan_number_masked = VALUES(pan_number_masked),\n' +
+    '           pan_number_hash = VALUES(pan_number_hash),\n' +
+    '           aadhaar_number_masked = VALUES(aadhaar_number_masked),\n' +
+    '           aadhaar_number_hash = VALUES(aadhaar_number_hash),\n' +
+    '           id_document_path = VALUES(id_document_path),\n' +
+    "           status = 'PENDING',\n" +
+    '           rejection_reason = NULL,\n' +
+    '           submitted_at = CURRENT_TIMESTAMP',
+  sqlState: '01000',
+  sqlMessage: "Data truncated for column 'status' at row 1"
+}
+
+===== RUN legacy2 2026-09-13T17:47:04.953Z =====
+[dotenv@17.3.1] injecting env (0) from backend\.env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[QA HARNESS] server running on port 5000
+MySQL connected successfully
+Submit KYC Error: Error: Data truncated for column 'status' at row 1
+    at PromisePoolConnection.query (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:157:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 'WARN_DATA_TRUNCATED',
+  errno: 1265,
+  sql: 'INSERT INTO user_kyc (user_id, pan_number_masked, pan_number_hash, aadhaar_number_masked, aadhaar_number_hash, id_document_path, status)\n' +
+    "         VALUES (38, 'MANUL****Z', 'b9a7c37cf27db563a5565d3c52172497e92c4216be092944be25bef4c4c79588', 'XXXX-XXXX-8901', 'c1744ecfc0180ed6552a356dec5b2317152a16d8c0f1e1b83f2151f20d6cbf1e', 'storage/private_kyc_docs/default-placeholder.pdf', 'PENDING')\n" +
+    '         ON DUPLICATE KEY UPDATE \n' +
+    '           pan_number_masked = VALUES(pan_number_masked),\n' +
+    '           pan_number_hash = VALUES(pan_number_hash),\n' +
+    '           aadhaar_number_masked = VALUES(aadhaar_number_masked),\n' +
+    '           aadhaar_number_hash = VALUES(aadhaar_number_hash),\n' +
+    '           id_document_path = VALUES(id_document_path),\n' +
+    "           status = 'PENDING',\n" +
+    '           rejection_reason = NULL,\n' +
+    '           submitted_at = CURRENT_TIMESTAMP',
+  sqlState: '01000',
+  sqlMessage: "Data truncated for column 'status' at row 1"
+}
+Submit KYC Error: Error: Data truncated for column 'status' at row 1
+    at PromisePoolConnection.query (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:157:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 'WARN_DATA_TRUNCATED',
+  errno: 1265,
+  sql: 'INSERT INTO user_kyc (user_id, pan_number_masked, pan_number_hash, aadhaar_number_masked, aadhaar_number_hash, id_document_path, status)\n' +
+    "         VALUES (40, 'MNULX****Z', '139f92d836b24264c5c4a3e03b8058844df1873a77a6cb8108d80d6123010c6e', 'XXXX-XXXX-7141', '9c0426a9e5a623219fc86b5ef231eacf1add7ae8477ce6492cef80b59995a451', 'storage/private_kyc_docs/default-placeholder.pdf', 'PENDING')\n" +
+    '         ON DUPLICATE KEY UPDATE \n' +
+    '           pan_number_masked = VALUES(pan_number_masked),\n' +
+    '           pan_number_hash = VALUES(pan_number_hash),\n' +
+    '           aadhaar_number_masked = VALUES(aadhaar_number_masked),\n' +
+    '           aadhaar_number_hash = VALUES(aadhaar_number_hash),\n' +
+    '           id_document_path = VALUES(id_document_path),\n' +
+    "           status = 'PENDING',\n" +
+    '           rejection_reason = NULL,\n' +
+    '           submitted_at = CURRENT_TIMESTAMP',
+  sqlState: '01000',
+  sqlMessage: "Data truncated for column 'status' at row 1"
+}

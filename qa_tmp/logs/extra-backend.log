@@ -1,0 +1,48 @@
+[dotenv@17.3.1] injecting env (7) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Server running on port 5000
+MySQL connected successfully
+Submit KYC Error: Error: Deadlock found when trying to get lock; try restarting transaction
+    at PromisePoolConnection.query (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:157:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 'ER_LOCK_DEADLOCK',
+  errno: 1213,
+  sql: 'INSERT INTO user_kyc (user_id, pan_number_masked, pan_number_hash, aadhaar_number_masked, aadhaar_number_hash, id_document_path, status)\n' +
+    "         VALUES (31, 'RAPID****K', 'e124f2a454ab1d6db488f729145cd3715574939b04c3151f6fb22d870419d161', 'XXXX-XXXX-1767', 'c43c80a31c80844ff0418b2c70e317664c153a380d593b88e80c7f9f87e28a19', 'storage/private_kyc_docs/default-placeholder.pdf', 'PENDING')\n" +
+    '         ON DUPLICATE KEY UPDATE \n' +
+    '           pan_number_masked = VALUES(pan_number_masked),\n' +
+    '           pan_number_hash = VALUES(pan_number_hash),\n' +
+    '           aadhaar_number_masked = VALUES(aadhaar_number_masked),\n' +
+    '           aadhaar_number_hash = VALUES(aadhaar_number_hash),\n' +
+    '           id_document_path = VALUES(id_document_path),\n' +
+    "           status = 'PENDING',\n" +
+    '           rejection_reason = NULL,\n' +
+    '           submitted_at = CURRENT_TIMESTAMP',
+  sqlState: '40001',
+  sqlMessage: 'Deadlock found when trying to get lock; try restarting transaction'
+}
+[dotenv@17.3.1] injecting env (7) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Server running on port 5000
+MySQL connected successfully
+Submit KYC Error: Error: Deadlock found when trying to get lock; try restarting transaction
+    at PromisePoolConnection.query (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at exports.submitKyc (C:\Users\saiku\OneDrive\Desktop\chit_fund\backend\controllers\profileController.js:157:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 'ER_LOCK_DEADLOCK',
+  errno: 1213,
+  sql: 'INSERT INTO user_kyc (user_id, pan_number_masked, pan_number_hash, aadhaar_number_masked, aadhaar_number_hash, id_document_path, status)\n' +
+    "         VALUES (32, 'RAPID****K', 'aefea7764ceec6c92b3a3e969f51158e5814800661feaf1c6092d6f93a7e71c0', 'XXXX-XXXX-6237', '48e1c3f889fc4c66a144888918e46e7517fa1016eefb234e563fa9d2ac80d051', 'storage/private_kyc_docs/default-placeholder.pdf', 'PENDING')\n" +
+    '         ON DUPLICATE KEY UPDATE \n' +
+    '           pan_number_masked = VALUES(pan_number_masked),\n' +
+    '           pan_number_hash = VALUES(pan_number_hash),\n' +
+    '           aadhaar_number_masked = VALUES(aadhaar_number_masked),\n' +
+    '           aadhaar_number_hash = VALUES(aadhaar_number_hash),\n' +
+    '           id_document_path = VALUES(id_document_path),\n' +
+    "           status = 'PENDING',\n" +
+    '           rejection_reason = NULL,\n' +
+    '           submitted_at = CURRENT_TIMESTAMP',
+  sqlState: '40001',
+  sqlMessage: 'Deadlock found when trying to get lock; try restarting transaction'
+}

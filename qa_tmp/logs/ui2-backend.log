@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (9) from backend\.env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[QA HARNESS] server running on port 5000
+MySQL connected successfully

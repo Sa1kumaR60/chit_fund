@@ -11,7 +11,10 @@ const auctionRoutes = require("./routes/auctionRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const walletRoutes = require("./routes/walletRoutes");
 const notificationRoutes = require("./routes/notificationRoutes");
+const profileRoutes = require("./routes/profileRoutes");
 const { initCronJobs } = require("./services/cronService");
+
+const path = require("path");
 
 const app = express();
 
@@ -24,6 +27,9 @@ app.use(cors({
 }));
 app.use(express.json({ limit: "1mb" }));
 
+// Static uploads route for avatar media
+app.use("/uploads", express.static(path.join(__dirname, "uploads"), { dotfiles: "ignore", index: false }));
+
 app.use("/api/auth", authRoutes);
 app.use("/api/chits", chitRoutes);
 app.use("/api/payments", paymentRoutes);
@@ -31,6 +37,7 @@ app.use("/api/auctions", auctionRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/wallets", walletRoutes);
 app.use("/api/notifications", notificationRoutes);
+app.use("/api/profile", profileRoutes);
 
 app.get("/", (req, res) => {
   res.send("Chit Fund Backend Running");
